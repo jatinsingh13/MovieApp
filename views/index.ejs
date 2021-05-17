@@ -1,0 +1,37 @@
+<%- include("../views/partials/header.ejs") %>
+
+<div class="jumbotron text-center">
+	<h4>
+		Here are some results for your search
+	</h4>
+</div>
+
+
+<% let movies=data.Search; %>
+<div class="section1">
+	<div class="container" >
+	<div  class="row " id="movies">
+		<% movies.forEach(function(movie){ %>
+		
+		<div class="col-md-3 col-sm-6 mb-4">
+						<div class="card" >
+							<img src=<%=movie.Poster%>  alt="image" class="card-img-top">
+							<div class="card-body text-center">
+								
+								<p class="card-text">
+									<%= movie.Title%>	
+								</p>
+								<%let movieId=movie.imdbID%>
+								<a class="btn btn-primary btn-sm" href="/movie/<%=movieId%>">Know More</a>
+							</div>
+						</div>
+					</div>
+
+<% })%>
+</div>	
+</div>
+</div>
+
+
+
+<%- include("../views/partials/footer.ejs") %>

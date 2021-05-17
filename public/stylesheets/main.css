@@ -1,0 +1,25 @@
+#movies img 
+{
+	width:100%;
+}
+
+#movies .col-md-3 .card
+{
+	height:390px;
+	margin-bottom:20px;
+}
+
+#movies .col-md-3 img
+{
+	height:240px;
+}
+
+#moviespage
+{
+	padding-left:100px;	
+}
+
+.btn-container
+{
+	margin-left: 40%;
+}

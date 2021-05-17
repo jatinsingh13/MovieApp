@@ -1,0 +1,54 @@
+<%- include("../views/partials/header.ejs") %>
+<% let movies=data;%>
+	
+<div class="container" id="moviespage ">
+
+<div class ="row">
+	<div class="col-md-4">
+		<img src=<%=movies.Poster%> class="img-fluid img-thumbnail">
+	</div>
+	<div class="col-md-7">
+		<h2><%=movies.Title%></h2>
+		<ul class="list-group">
+			<li class="list-group-item"><strong>Genre : </strong> <%=movies.Genre%></li>
+			<li class="list-group-item">Released : </strong> <%=movies.Released%></li>
+			<li class="list-group-item">IMDB Rating : </strong> <%=movies.imdbRating%></li>
+			<li class="list-group-item">Director : </strong> <%=movies.Director%></li>
+			<li class="list-group-item">Writer : </strong> <%=movies.Writer%></li>
+			<li class="list-group-item">Actors : </strong> <%=movies.Actors%></li>
+		</ul>
+	</div>
+<div class="col-md-1">
+</div>
+</div>
+
+<div class="row mt-5 mb-5 text-center">
+	
+	<div class="card card-body" id="plot">
+		<h3>
+			Plot
+		</h3>
+		<%=movies.Plot%>
+		<hr>
+		
+		
+		
+	</div>
+</div>
+
+<div class="row mb-5 btn-container">
+	<div class="flex">
+		<a href="http://imdb.com/title/<%=movies.imdbID%>" class="btn btn-primary mr-3 text-center">View IMDB</a>
+	</div>
+
+	<div class="flex">
+		<a href="/" class="btn btn-primary">Go Back To Search</a>
+	</div>
+	<div class="col-md-8">
+		
+	</div>
+
+</div>
+</div>
+
+<%- include("../views/partials/footer.ejs") %>
